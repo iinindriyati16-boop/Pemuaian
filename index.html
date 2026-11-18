@@ -1,0 +1,1975 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahan Ajar IPA Interaktif: Pemuaian Zat (Kelas 7 SMP) - Ibu Iin Indriyati</title>
+    <style>
+        /* =========================================================================
+           1. RESET & VARIABEL DESAIN (OFFLINE-READY, MODERN & RAMAH SISWA SMP)
+           ========================================================================= */
+        :root {
+            --primary: #1d4ed8;       /* Biru Sains */
+            --primary-dark: #1e3a8a;
+            --primary-light: #eff6ff;
+            --heat: #ea580c;          /* Oranye Kalor */
+            --heat-light: #fff7ed;
+            --heat-border: #fed7aa;
+            --teal: #0d9488;
+            --teal-light: #f0fdfa;
+            --success: #16a34a;
+            --success-light: #f0fdf4;
+            --danger: #dc2626;
+            --danger-light: #fef2f2;
+            --bg-main: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --radius-lg: 18px;
+            --radius-md: 12px;
+            --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.05);
+            --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 50%, #fff7ed 100%);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* =========================================================================
+           2. HEADER & NAVIGASI TAB UTAMA
+           ========================================================================= */
+        header {
+            background: linear-gradient(120deg, #1e3a8a 0%, #1d4ed8 55%, #ea580c 100%);
+            color: #ffffff;
+            padding: 1.25rem 1rem;
+            box-shadow: 0 4px 20px rgba(30, 58, 138, 0.25);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .header-top {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .brand-box {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+        }
+
+        .brand-icon {
+            width: 52px;
+            height: 52px;
+            background: rgba(255, 255, 255, 0.16);
+            border: 1.5px solid rgba(255, 255, 255, 0.35);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            flex-shrink: 0;
+        }
+
+        .badge-kelas {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            padding: 0.15rem 0.65rem;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+        }
+
+        .header-title {
+            font-size: 1.35rem;
+            font-weight: 800;
+            line-height: 1.25;
+        }
+
+        .teacher-tag {
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+            color: #e0f2fe;
+        }
+
+        .teacher-tag strong {
+            background: #fef08a;
+            color: #1e3a8a;
+            padding: 0.15rem 0.6rem;
+            border-radius: 6px;
+            font-weight: 800;
+        }
+
+        .btn-print-top {
+            background: rgba(255, 255, 255, 0.18);
+            hover: background: rgba(255, 255, 255, 0.3);
+            color: #fff;
+            border: 1.5px solid rgba(255, 255, 255, 0.45);
+            padding: 0.55rem 1rem;
+            border-radius: 10px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: all 0.2s;
+        }
+
+        .btn-print-top:hover {
+            background: #ffffff;
+            color: var(--primary-dark);
+        }
+
+        /* Navigasi Tab */
+        .nav-tabs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.5rem;
+            background: rgba(15, 23, 42, 0.25);
+            padding: 0.4rem;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: none;
+            color: #e2e8f0;
+            padding: 0.65rem 0.75rem;
+            border-radius: 10px;
+            font-size: 0.84rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            text-align: center;
+        }
+
+        .tab-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+        }
+
+        .tab-btn.active {
+            background: #ffffff;
+            color: var(--primary-dark);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* =========================================================================
+           3. KONTEN UTAMA & KARTU
+           ========================================================================= */
+        main {
+            flex: 1;
+            padding: 1.75rem 1rem 3rem;
+        }
+
+        .tab-panel {
+            display: none;
+            animation: fadeIn 0.35s ease;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .section-pill {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            margin-bottom: 0.5rem;
+        }
+
+        .pill-blue { background: var(--primary-light); color: var(--primary); border: 1px solid #bfdbfe; }
+        .pill-heat { background: var(--heat-light); color: var(--heat); border: 1px solid var(--heat-border); }
+        .pill-teal { background: var(--teal-light); color: var(--teal); border: 1px solid #99f6e4; }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.4rem;
+        }
+
+        /* Grid Sistem */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+        }
+
+        /* Kotak Rumus Matematis HTML/CSS Murni */
+        .formula-card {
+            background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);
+            border: 1.5px solid #bfdbfe;
+            border-radius: var(--radius-md);
+            padding: 1.15rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .formula-box {
+            background: #ffffff;
+            border: 1.5px dashed #3b82f6;
+            border-radius: 10px;
+            padding: 0.75rem;
+            text-align: center;
+            font-family: 'Cambria Math', 'Times New Roman', serif;
+            font-size: 1.12rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin: 0.75rem 0;
+        }
+
+        .formula-box sub {
+            font-size: 0.75em;
+        }
+
+        .var-list {
+            font-size: 0.82rem;
+            color: #475569;
+            list-style: none;
+        }
+
+        .var-list li {
+            margin-bottom: 0.25rem;
+        }
+
+        /* Highlight Box Cair & Gas */
+        .info-banner {
+            border-radius: var(--radius-md);
+            padding: 1.1rem;
+            border: 1px solid;
+        }
+
+        .info-cyan {
+            background: #ecfeff;
+            border-color: #a5f3fc;
+            color: #164e63;
+        }
+
+        .info-amber {
+            background: #fffbeb;
+            border-color: #fde68a;
+            color: #78350f;
+        }
+
+        /* =========================================================================
+           4. SIMULATOR LABORATORIUM VIRTUAL (BATANG LOGAM & BIMETAL)
+           ========================================================================= */
+        .sim-container {
+            background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 60%, #fff7ed 100%);
+            border: 2px solid #93c5fd;
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .sim-controls {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 1rem 0 1.25rem;
+        }
+
+        .control-group {
+            background: #ffffff;
+            padding: 0.9rem;
+            border-radius: 12px;
+            border: 1px solid #cbd5e1;
+        }
+
+        .control-group label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #334155;
+            margin-bottom: 0.45rem;
+        }
+
+        .control-group select,
+        .control-group input[type="range"] {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .control-group select {
+            padding: 0.5rem;
+            border-radius: 8px;
+            border: 1px solid #94a3b8;
+            font-weight: 700;
+            color: var(--primary-dark);
+            background: #f8fafc;
+        }
+
+        .range-val {
+            display: inline-block;
+            background: var(--heat-light);
+            color: var(--heat);
+            font-weight: 800;
+            padding: 0.1rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            float: right;
+        }
+
+        /* Stage Visualisasi Batang Logam */
+        .rod-stage {
+            background: #0f172a;
+            border-radius: 14px;
+            padding: 1.5rem 1.25rem;
+            color: #f8fafc;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .rod-ruler {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.72rem;
+            color: #94a3b8;
+            border-bottom: 1px dashed #334155;
+            padding-bottom: 0.35rem;
+            margin-bottom: 1rem;
+        }
+
+        .rod-track {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 0.85rem;
+            position: relative;
+        }
+
+        .metal-rod-wrapper {
+            display: flex;
+            align-items: center;
+            height: 36px;
+        }
+
+        .metal-rod-base {
+            height: 32px;
+            background: linear-gradient(180deg, #94a3b8 0%, #475569 100%);
+            border-radius: 6px 0 0 6px;
+            transition: width 0.25s ease, background 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: #ffffff;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .metal-rod-delta {
+            height: 32px;
+            background: repeating-linear-gradient(
+                45deg,
+                #f97316,
+                #f97316 6px,
+                #fbbf24 6px,
+                #fbbf24 12px
+            );
+            border-radius: 0 6px 6px 0;
+            transition: width 0.25s ease;
+            box-shadow: 0 0 12px rgba(249, 115, 22, 0.75);
+        }
+
+        .flame-indicator {
+            margin-top: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #fdba74;
+        }
+
+        .sim-results {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.75rem;
+        }
+
+        .res-box {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            padding: 0.75rem;
+            text-align: center;
+        }
+
+        .res-box span.lbl {
+            display: block;
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            font-weight: 700;
+        }
+
+        .res-box strong.val {
+            display: block;
+            font-size: 1.05rem;
+            color: var(--primary-dark);
+            margin-top: 0.2rem;
+        }
+
+        /* Simulasi Keping Bimetal */
+        .bimetal-stage {
+            background: #ffffff;
+            border: 1.5px solid #fed7aa;
+            border-radius: 14px;
+            padding: 1.25rem;
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 1.25rem;
+            align-items: center;
+        }
+
+        .bimetal-canvas-box {
+            background: #0f172a;
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            color: #fff;
+        }
+
+        .bimetal-btn-group {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 0.85rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-sim {
+            border: none;
+            padding: 0.55rem 0.95rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.15s, opacity 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .btn-sim:active { transform: scale(0.96); }
+        .btn-heat { background: #ea580c; color: #fff; }
+        .btn-normal { background: #475569; color: #fff; }
+        .btn-cool { background: #0284c7; color: #fff; }
+
+        /* =========================================================================
+           5. TAB 2: KARTU PENERAPAN SEHARI-HARI
+           ========================================================================= */
+        .app-card {
+            background: #ffffff;
+            border: 1.5px solid var(--border-color);
+            border-radius: 14px;
+            padding: 1.15rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .app-card:hover {
+            border-color: #3b82f6;
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .app-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+        }
+
+        .app-title-wrap {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .app-emoji {
+            font-size: 1.65rem;
+            width: 46px;
+            height: 46px;
+            background: var(--primary-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .app-toggle-tag {
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--primary);
+            background: var(--primary-light);
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            white-space: nowrap;
+        }
+
+        .app-detail {
+            display: none;
+            margin-top: 0.9rem;
+            padding-top: 0.9rem;
+            border-top: 1px dashed #cbd5e1;
+            font-size: 0.88rem;
+            color: #334155;
+        }
+
+        .app-card.open .app-detail {
+            display: block;
+            animation: fadeIn 0.25s ease;
+        }
+
+        /* =========================================================================
+           6. TAB 3: CONTOH SOAL & PEMBAHASAN BERTAHAP
+           ========================================================================= */
+        .example-card {
+            background: #ffffff;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 16px;
+            padding: 1.35rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .ex-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .ex-num {
+            background: var(--primary);
+            color: #fff;
+            font-size: 0.78rem;
+            font-weight: 800;
+            padding: 0.25rem 0.75rem;
+            border-radius: 8px;
+        }
+
+        .ex-topic {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--heat);
+            background: var(--heat-light);
+            border: 1px solid var(--heat-border);
+            padding: 0.2rem 0.65rem;
+            border-radius: 8px;
+        }
+
+        .ex-question {
+            font-size: 0.96rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 1rem;
+            white-space: pre-line;
+        }
+
+        .btn-step {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 0.55rem 1rem;
+            border-radius: 10px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-step:hover {
+            background: var(--primary-dark);
+        }
+
+        .step-solution {
+            display: none;
+            margin-top: 1rem;
+            background: #f8fafc;
+            border-left: 4px solid var(--primary);
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            font-size: 0.88rem;
+        }
+
+        .step-solution.open {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .step-row {
+            margin-bottom: 0.55rem;
+            padding-bottom: 0.55rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .step-row:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .step-label {
+            font-weight: 800;
+            color: var(--primary-dark);
+            display: inline-block;
+            min-width: 95px;
+        }
+
+        /* =========================================================================
+           7. TAB 4: LATIHAN SOAL INTERAKTIF (10 BUTIR)
+           ========================================================================= */
+        .quiz-student-bar {
+            display: grid;
+            grid-template-columns: 1fr 1fr auto;
+            gap: 1rem;
+            align-items: end;
+            background: #f1f5f9;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 1.25rem;
+        }
+
+        .input-field label {
+            display: block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #334155;
+            margin-bottom: 0.3rem;
+        }
+
+        .input-field input {
+            width: 100%;
+            padding: 0.55rem 0.8rem;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            font-size: 0.9rem;
+        }
+
+        .progress-pill {
+            background: #ffffff;
+            border: 1.5px solid #93c5fd;
+            padding: 0.55rem 1rem;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+            text-align: center;
+        }
+
+        .quiz-card {
+            background: #ffffff;
+            border: 1.5px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.35rem;
+            margin-bottom: 1.15rem;
+        }
+
+        .q-header {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .q-number {
+            width: 32px;
+            height: 32px;
+            border-radius: 9px;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            font-weight: 800;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .q-text {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: #0f172a;
+            margin-bottom: 0.9rem;
+            white-space: pre-line;
+        }
+
+        .options-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+        }
+
+        .opt-btn {
+            width: 100%;
+            text-align: left;
+            background: #f8fafc;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 11px;
+            padding: 0.7rem 0.95rem;
+            font-size: 0.88rem;
+            color: #334155;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            transition: all 0.15s ease;
+        }
+
+        .opt-btn:hover:not(:disabled) {
+            background: var(--primary-light);
+            border-color: #60a5fa;
+        }
+
+        .opt-btn.selected {
+            background: var(--primary-light);
+            border-color: var(--primary);
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+
+        .opt-btn.correct {
+            background: var(--success-light);
+            border-color: var(--success);
+            color: #14532d;
+            font-weight: 700;
+        }
+
+        .opt-btn.wrong {
+            background: var(--danger-light);
+            border-color: var(--danger);
+            color: #7f1d1d;
+            font-weight: 700;
+        }
+
+        .opt-left {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+        }
+
+        .opt-letter {
+            width: 26px;
+            height: 26px;
+            border-radius: 7px;
+            background: #ffffff;
+            border: 1px solid #94a3b8;
+            font-size: 0.78rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .opt-btn.selected .opt-letter {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+        }
+
+        .opt-btn.correct .opt-letter {
+            background: var(--success);
+            color: #fff;
+            border-color: var(--success);
+        }
+
+        .opt-btn.wrong .opt-letter {
+            background: var(--danger);
+            color: #fff;
+            border-color: var(--danger);
+        }
+
+        .q-explanation {
+            margin-top: 0.9rem;
+            padding: 0.85rem 1rem;
+            border-radius: 10px;
+            font-size: 0.84rem;
+            background: #fffbeb;
+            border: 1px solid #fde68a;
+            color: #78350f;
+        }
+
+        .q-explanation.ok {
+            background: var(--success-light);
+            border-color: #bbf7d0;
+            color: #14532d;
+        }
+
+        .score-panel {
+            display: none;
+            background: linear-gradient(125deg, #1e3a8a 0%, #1d4ed8 60%, #ea580c 100%);
+            color: #ffffff;
+            border-radius: 18px;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .score-panel.show {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.25rem;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .score-circle {
+            background: #ffffff;
+            color: var(--primary-dark);
+            padding: 1rem 1.75rem;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .score-circle .num {
+            font-size: 2.75rem;
+            font-weight: 900;
+            line-height: 1.1;
+            display: block;
+        }
+
+        .quiz-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .btn-primary-lg {
+            background: linear-gradient(90deg, #1d4ed8, #ea580c);
+            color: #ffffff;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 12px;
+            font-size: 0.92rem;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(29, 78, 216, 0.3);
+            transition: transform 0.15s;
+        }
+
+        .btn-primary-lg:hover { transform: translateY(-1px); }
+        .btn-primary-lg:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        .btn-secondary-lg {
+            background: #e2e8f0;
+            color: #1e293b;
+            border: none;
+            padding: 0.8rem 1.25rem;
+            border-radius: 12px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .alert-msg {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            color: #92400e;
+            padding: 0.75rem 1rem;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-top: 0.75rem;
+            display: none;
+        }
+
+        /* =========================================================================
+           8. FOOTER & RESPONSIF & PRINT
+           ========================================================================= */
+        footer {
+            background: #ffffff;
+            border-top: 1px solid var(--border-color);
+            padding: 1.25rem 1rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        @media (max-width: 820px) {
+            .grid-3, .sim-controls { grid-template-columns: 1fr; }
+            .grid-2, .bimetal-stage { grid-template-columns: 1fr; }
+            .sim-results { grid-template-columns: repeat(2, 1fr); }
+            .nav-tabs { grid-template-columns: repeat(2, 1fr); }
+            .quiz-student-bar { grid-template-columns: 1fr; }
+        }
+
+        @media print {
+            header, .nav-tabs, .btn-print-top, .quiz-actions, .sim-container, footer {
+                display: none !important;
+            }
+            .tab-panel {
+                display: block !important;
+            }
+            body {
+                background: #ffffff !important;
+            }
+            .card, .quiz-card, .example-card {
+                box-shadow: none !important;
+                border: 1px solid #94a3b8 !important;
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =========================================================================
+         HEADER & IDENTITAS PENYUSUN
+         ========================================================================= -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="brand-box">
+                    <div class="brand-icon" aria-hidden="true">🌡️</div>
+                    <div>
+                        <span class="badge-kelas">Modul Pembelajaran IPA • Kelas 7 SMP</span>
+                        <h1 class="header-title">Bahan Ajar IPA Interaktif: Pemuaian Zat (Kelas 7 SMP)</h1>
+                        <p class="teacher-tag">Disusun oleh: <strong>Ibu Iin Indriyati</strong></p>
+                    </div>
+                </div>
+                <button class="btn-print-top" onclick="window.print()" title="Cetak halaman bahan ajar">
+                    🖨️ Cetak / Simpan PDF
+                </button>
+            </div>
+
+            <!-- Navigasi 4 Tab Utama -->
+            <nav class="nav-tabs" role="tablist">
+                <button class="tab-btn active" id="tab-btn-1" onclick="switchTab(1)">
+                    🔬 1. Materi &amp; Simulasi
+                </button>
+                <button class="tab-btn" id="tab-btn-2" onclick="switchTab(2)">
+                    🚆 2. Penerapan Sehari-hari
+                </button>
+                <button class="tab-btn" id="tab-btn-3" onclick="switchTab(3)">
+                    📘 3. Contoh &amp; Pembahasan
+                </button>
+                <button class="tab-btn" id="tab-btn-4" onclick="switchTab(4)">
+                    ✍️ 4. Latihan Soal (10 Butir)
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- =========================================================================
+         KONTEN UTAMA
+         ========================================================================= -->
+    <main class="container">
+
+        <!-- =====================================================================
+             TAB 1: MATERI LENGKAP & SIMULASI INTERAKTIF
+             ===================================================================== -->
+        <section id="panel-1" class="tab-panel active">
+
+            <!-- Konsep Dasar Pemuaian -->
+            <div class="card">
+                <span class="section-pill pill-heat">Konsep Dasar Suhu &amp; Kalor</span>
+                <h2>Apa itu Pemuaian dan Penyusutan?</h2>
+                <p style="margin-bottom: 1rem; color: #334155;">
+                    Setiap benda tersusun atas partikel-partikel penyusun yang selalu bergerak. Ketika suatu benda menerima energi panas (<strong>kalor</strong>) sehingga suhunya naik, partikel-partikel di dalamnya bergerak semakin cepat dan saling menjauh. Akibatnya, ukuran benda tersebut bertambah besar.
+                </p>
+                <div class="grid-2">
+                    <div class="info-banner" style="background: #fff7ed; border-color: #fed7aa; color: #7c2d12;">
+                        <h3>🔥 Pemuaian (Ekspansi Termal)</h3>
+                        <p style="font-size: 0.88rem;">
+                            <strong>Pemuaian</strong> adalah bertambahnya ukuran suatu benda (panjang, luas, atau volume) karena mengalami <strong>kenaikan suhu</strong> akibat menyerap energi kalor.
+                        </p>
+                    </div>
+                    <div class="info-banner" style="background: #eff6ff; border-color: #bfdbfe; color: #1e3a8a;">
+                        <h3>❄️ Penyusutan (Kontraksi Termal)</h3>
+                        <p style="font-size: 0.88rem;">
+                            <strong>Penyusutan</strong> adalah berkurangnya ukuran suatu benda (kembali mengecil/memendek) karena mengalami <strong>penurunan suhu</strong> akibat melepaskan energi kalor.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Jenis Pemuaian Zat Padat -->
+            <div class="card">
+                <span class="section-pill pill-blue">Pemuaian Zat Padat</span>
+                <h2>Tiga Jenis Pemuaian pada Zat Padat</h2>
+                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 1rem;">
+                    Zat padat memiliki bentuk dan volume tetap sehingga dapat mengalami pemuaian panjang, luas, dan volume. Besarnya pemuaian bergantung pada ukuran awal, kenaikan suhu, dan <strong>koefisien muai panjang (&alpha;)</strong> bahan.
+                </p>
+
+                <div class="grid-3">
+                    <!-- 1. Pemuaian Panjang -->
+                    <div class="formula-card">
+                        <div>
+                            <span class="section-pill pill-blue">1 Dimensi (Garis)</span>
+                            <h3>a. Pemuaian Panjang</h3>
+                            <p style="font-size: 0.83rem; color: #475569;">
+                                Terjadi pada benda padat yang bentuknya memanjang (luas penampang sangat kecil dibanding panjangnya), seperti kawat, rel kereta api, dan batang logam.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="formula-box">
+                                &Delta;L = L<sub>0</sub> &middot; &alpha; &middot; &Delta;T<br>
+                                L<sub>t</sub> = L<sub>0</sub> + &Delta;L
+                            </div>
+                            <ul class="var-list">
+                                <li><strong>&Delta;L</strong> = Pertambahan panjang (m atau cm)</li>
+                                <li><strong>L<sub>0</sub></strong> = Panjang awal benda (m atau cm)</li>
+                                <li><strong>L<sub>t</sub></strong> = Panjang akhir benda (m atau cm)</li>
+                                <li><strong>&alpha;</strong> = Koefisien muai panjang (/&deg;C)</li>
+                                <li><strong>&Delta;T</strong> = Kenaikan suhu = T<sub>akhir</sub> &minus; T<sub>awal</sub> (&deg;C)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 2. Pemuaian Luas -->
+                    <div class="formula-card">
+                        <div>
+                            <span class="section-pill pill-teal">2 Dimensi (Bidang)</span>
+                            <h3>b. Pemuaian Luas</h3>
+                            <p style="font-size: 0.83rem; color: #475569;">
+                                Terjadi pada benda padat berbentuk lempengan atau lembaran tipis, seperti kaca jendela dan pelat logam. Koefisien muai luas (&beta;) bernilai <strong>2 kali</strong> koefisien muai panjang.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="formula-box">
+                                &Delta;A = A<sub>0</sub> &middot; &beta; &middot; &Delta;T<br>
+                                A<sub>t</sub> = A<sub>0</sub> + &Delta;A &nbsp;|&nbsp; &beta; = 2&alpha;
+                            </div>
+                            <ul class="var-list">
+                                <li><strong>&Delta;A</strong> = Pertambahan luas (m<sup>2</sup> atau cm<sup>2</sup>)</li>
+                                <li><strong>A<sub>0</sub></strong> = Luas awal benda (m<sup>2</sup> atau cm<sup>2</sup>)</li>
+                                <li><strong>A<sub>t</sub></strong> = Luas akhir benda (m<sup>2</sup> atau cm<sup>2</sup>)</li>
+                                <li><strong>&beta;</strong> = Koefisien muai luas = <strong>2&alpha;</strong> (/&deg;C)</li>
+                                <li><strong>&Delta;T</strong> = Kenaikan suhu (&deg;C)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 3. Pemuaian Volume -->
+                    <div class="formula-card">
+                        <div>
+                            <span class="section-pill pill-heat">3 Dimensi (Ruang)</span>
+                            <h3>c. Pemuaian Volume</h3>
+                            <p style="font-size: 0.83rem; color: #475569;">
+                                Terjadi pada benda padat yang memiliki ruang (panjang, lebar, dan tinggi), seperti kubus logam, bola besi, dan bejana. Koefisien muai volume (&gamma;) bernilai <strong>3 kali</strong> koefisien muai panjang.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="formula-box">
+                                &Delta;V = V<sub>0</sub> &middot; &gamma; &middot; &Delta;T<br>
+                                V<sub>t</sub> = V<sub>0</sub> + &Delta;V &nbsp;|&nbsp; &gamma; = 3&alpha;
+                            </div>
+                            <ul class="var-list">
+                                <li><strong>&Delta;V</strong> = Pertambahan volume (m<sup>3</sup> atau cm<sup>3</sup>)</li>
+                                <li><strong>V<sub>0</sub></strong> = Volume awal benda (m<sup>3</sup> atau cm<sup>3</sup>)</li>
+                                <li><strong>V<sub>t</sub></strong> = Volume akhir benda (m<sup>3</sup> atau cm<sup>3</sup>)</li>
+                                <li><strong>&gamma;</strong> = Koefisien muai volume = <strong>3&alpha;</strong> (/&deg;C)</li>
+                                <li><strong>&Delta;T</strong> = Kenaikan suhu (&deg;C)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pemuaian Zat Cair dan Zat Gas -->
+            <div class="card">
+                <span class="section-pill pill-teal">Pemuaian Fluida</span>
+                <h2>Pemuaian Zat Cair dan Zat Gas</h2>
+                <div class="grid-2" style="margin-top: 0.75rem;">
+                    <div class="info-banner info-cyan">
+                        <h3>💧 Pemuaian Zat Cair &amp; Anomali Air</h3>
+                        <ul style="font-size: 0.86rem; padding-left: 1.15rem; margin-top: 0.4rem;">
+                            <li style="margin-bottom: 0.35rem;">Zat cair <strong>hanya mengalami pemuaian volume (&Delta;V = V<sub>0</sub> &middot; &gamma; &middot; &Delta;T)</strong> karena bentuknya selalu mengikuti wadahnya.</li>
+                            <li style="margin-bottom: 0.35rem;">Pemuaian zat cair lebih besar daripada zat padat (contoh: air mendidih meluap dari panci penuh).</li>
+                            <li><strong>Anomali Air (0&deg;C &ndash; 4&deg;C):</strong> Sifat unik air! Ketika dipanaskan dari suhu <strong>0&deg;C hingga 4&deg;C</strong>, volume air justru <strong>menyusut</strong> dan massa jenisnya mencapai nilai maksimum pada suhu 4&deg;C. Di atas 4&deg;C, air memuai normal.</li>
+                        </ul>
+                    </div>
+                    <div class="info-banner info-amber">
+                        <h3>🎈 Pemuaian Zat Gas (Hukum Gay-Lussac)</h3>
+                        <ul style="font-size: 0.86rem; padding-left: 1.15rem; margin-top: 0.4rem;">
+                            <li style="margin-bottom: 0.35rem;">Gas juga <strong>hanya mengalami pemuaian volume</strong>, dengan besar pemuaian jauh lebih besar dibandingkan zat padat dan zat cair.</li>
+                            <li style="margin-bottom: 0.35rem;"><strong>Hukum Gay-Lussac:</strong> Pada tekanan tetap, volume gas sebanding dengan suhu mutlaknya, dengan koefisien muai volume semua jenis gas sama besar, yaitu <strong>&gamma; = 1/273 /&deg;C</strong>.</li>
+                            <li>Contoh: Balon udara mengembang saat dipanaskan dan ban sepeda bisa meletus jika diparkir di bawah terik matahari.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =================================================================
+                 SIMULATOR 1: LABORATORIUM VIRTUAL PEMUAIAN BATANG LOGAM
+                 ================================================================= -->
+            <div class="sim-container">
+                <span class="section-pill pill-heat">Laboratorium Virtual 1</span>
+                <h2>Simulasi Pemuaian Panjang Batang Logam</h2>
+                <p style="font-size: 0.88rem; color: #475569;">
+                    Pilih jenis bahan, atur panjang awal (L<sub>0</sub>), dan geser kenaikan suhu (&Delta;T) untuk mengamati pertambahan panjang batang logam secara langsung!
+                </p>
+
+                <div class="sim-controls">
+                    <div class="control-group">
+                        <label for="metal-select">1. Pilih Jenis Bahan:</label>
+                        <select id="metal-select" onchange="updateRodSim()">
+                            <option value="0.000024" data-name="Aluminium">Aluminium (&alpha; = 0,000024 /&deg;C)</option>
+                            <option value="0.000017" data-name="Tembaga">Tembaga (&alpha; = 0,000017 /&deg;C)</option>
+                            <option value="0.000012" data-name="Besi / Baja">Besi / Baja (&alpha; = 0,000012 /&deg;C)</option>
+                            <option value="0.000009" data-name="Kaca">Kaca (&alpha; = 0,000009 /&deg;C)</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="l0-slider">
+                            2. Panjang Awal (L<sub>0</sub>):
+                            <span class="range-val" id="l0-display">5,0 m</span>
+                        </label>
+                        <input type="range" id="l0-slider" min="1" max="10" step="0.5" value="5" oninput="updateRodSim()">
+                    </div>
+
+                    <div class="control-group">
+                        <label for="dt-slider">
+                            3. Kenaikan Suhu (&Delta;T):
+                            <span class="range-val" id="dt-display">100 &deg;C</span>
+                        </label>
+                        <input type="range" id="dt-slider" min="0" max="200" step="5" value="100" oninput="updateRodSim()">
+                    </div>
+                </div>
+
+                <!-- Visualisasi Batang -->
+                <div class="rod-stage">
+                    <div class="rod-ruler">
+                        <span>0 m</span>
+                        <span>2 m</span>
+                        <span>4 m</span>
+                        <span>6 m</span>
+                        <span>8 m</span>
+                        <span>10 m (+ Skala Pembesaran &Delta;L)</span>
+                    </div>
+                    <div class="rod-track">
+                        <div class="metal-rod-wrapper">
+                            <div id="rod-base-bar" class="metal-rod-base" style="width: 45%;">
+                                L<sub>0</sub> = 5,0 m
+                            </div>
+                            <div id="rod-delta-bar" class="metal-rod-delta" style="width: 8%;" title="Pertambahan Panjang (ΔL)"></div>
+                        </div>
+                    </div>
+                    <div class="flame-indicator">
+                        <span id="heat-status-text">🔥🔥 Pemanasan Sedang (&Delta;T = 100&deg;C)</span>
+                        <span style="color: #fbbf24; font-weight: 700;">■ Bagian bergaris oranye = Pertambahan Panjang (&Delta;L) diperbesar agar tampak</span>
+                    </div>
+                </div>
+
+                <!-- Hasil Perhitungan Real-time -->
+                <div class="sim-results">
+                    <div class="res-box">
+                        <span class="lbl">Koefisien Muai (&alpha;)</span>
+                        <strong class="val" id="res-alpha">0,000024 /&deg;C</strong>
+                    </div>
+                    <div class="res-box" style="border-color: #fdba74; background: #fff7ed;">
+                        <span class="lbl">Pertambahan Panjang (&Delta;L)</span>
+                        <strong class="val" style="color: #ea580c;" id="res-dl-mm">12,00 mm</strong>
+                    </div>
+                    <div class="res-box">
+                        <span class="lbl">Pertambahan Panjang (Meter)</span>
+                        <strong class="val" id="res-dl-m">0,01200 m</strong>
+                    </div>
+                    <div class="res-box" style="border-color: #93c5fd; background: #eff6ff;">
+                        <span class="lbl">Panjang Akhir (L<sub>t</sub> = L<sub>0</sub> + &Delta;L)</span>
+                        <strong class="val" id="res-lt">5,01200 m</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =================================================================
+                 SIMULATOR 2: KEPING BIMETAL INTERAKTIF
+                 ================================================================= -->
+            <div class="sim-container" style="border-color: #fdba74;">
+                <span class="section-pill pill-blue">Laboratorium Virtual 2</span>
+                <h2>Simulasi Keping Bimetal (Kuningan &amp; Besi)</h2>
+                <p style="font-size: 0.88rem; color: #475569; margin-bottom: 1rem;">
+                    <strong>Keping bimetal</strong> adalah dua keping logam berbeda jenis yang dikeling menjadi satu. Kuningan memiliki koefisien muai lebih besar (&alpha; = 0,000019 /&deg;C) daripada Besi (&alpha; = 0,000012 /&deg;C). Coba tekan tombol di bawah ini!
+                </p>
+
+                <div class="bimetal-stage">
+                    <div class="bimetal-canvas-box">
+                        <!-- SVG Keping Bimetal Dinamis -->
+                        <svg id="bimetal-svg" viewBox="0 0 320 175" width="100%" height="165">
+                            <!-- Penjepit / Dudukan Kiri -->
+                            <rect x="18" y="55" width="22" height="65" rx="4" fill="#64748b" />
+                            <text x="15" y="45" fill="#cbd5e1" font-size="10" font-weight="bold">Penjepit</text>
+
+                            <!-- Lapisan Atas: Kuningan (Oranye Emas) -->
+                            <path id="bimetal-brass" d="M 40 77 Q 160 77 285 77" stroke="#f59e0b" stroke-width="11" fill="none" stroke-linecap="round" />
+                            <!-- Lapisan Bawah: Besi (Abu Baja) -->
+                            <path id="bimetal-iron" d="M 40 89 Q 160 89 285 89" stroke="#94a3b8" stroke-width="11" fill="none" stroke-linecap="round" />
+
+                            <!-- Label Keterangan di Dalam SVG -->
+                            <text id="svg-temp-badge" x="165" y="25" text-anchor="middle" fill="#38bdf8" font-size="12" font-weight="bold">Suhu Normal (25&deg;C)</text>
+                            <rect x="65" y="148" width="12" height="12" rx="2" fill="#f59e0b" />
+                            <text x="82" y="158" fill="#fef3c7" font-size="10">Kuningan (&alpha; besar)</text>
+                            <rect x="185" y="148" width="12" height="12" rx="2" fill="#94a3b8" />
+                            <text x="202" y="158" fill="#e2e8f0" font-size="10">Besi (&alpha; kecil)</text>
+                        </svg>
+
+                        <div class="bimetal-btn-group">
+                            <button class="btn-sim btn-heat" onclick="setBimetalState('heat')">🔥 Panaskan</button>
+                            <button class="btn-sim btn-normal" onclick="setBimetalState('normal')">⚖️ Suhu Normal</button>
+                            <button class="btn-sim btn-cool" onclick="setBimetalState('cool')">❄️ Dinginkan</button>
+                        </div>
+                    </div>
+
+                    <div id="bimetal-explanation" style="font-size: 0.88rem; color: #334155;">
+                        <h3 style="color: var(--primary-dark);">Kondisi Awal: Suhu Normal (25&deg;C)</h3>
+                        <p style="margin-bottom: 0.6rem;">
+                            Pada suhu kamar, panjang keping <strong>Kuningan</strong> dan <strong>Besi</strong> sama sehingga keping bimetal berada dalam posisi lurus mendatar.
+                        </p>
+                        <div class="info-banner info-amber" style="font-size: 0.83rem;">
+                            <strong>💡 Rumus Hafalan Cepat Bimetal:</strong><br>
+                            • Saat <strong>DIPANASKAN</strong> &rarr; Melengkung ke arah logam berkoefisien muai <strong>KECIL</strong> (Besi).<br>
+                            • Saat <strong>DIDINGINKAN</strong> &rarr; Melengkung ke arah logam berkoefisien muai <strong>BESAR</strong> (Kuningan).
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- =====================================================================
+             TAB 2: PENERAPAN & MASALAH PEMUAIAN SEHARI-HARI
+             ===================================================================== -->
+        <section id="panel-2" class="tab-panel">
+            <div class="card">
+                <span class="section-pill pill-teal">Kontekstual &amp; Teknologi</span>
+                <h2>Penerapan &amp; Penanganan Masalah Pemuaian dalam Kehidupan Sehari-hari</h2>
+                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 1.25rem;">
+                    Klik pada setiap kartu di bawah ini untuk membuka penjelasan ilmiah mengenai cara manusia memanfaatkan sekaligus mengantisipasi pemuaian zat.
+                </p>
+
+                <div class="grid-2" id="applications-grid">
+                    <!-- Diisi otomatis via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             TAB 3: CONTOH SOAL & PEMBAHASAN BERTAHAP (5 SOAL)
+             ===================================================================== -->
+        <section id="panel-3" class="tab-panel">
+            <div class="card">
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+                    <div>
+                        <span class="section-pill pill-blue">Panduan Penyelesaian Langkah demi Langkah</span>
+                        <h2>Contoh Soal &amp; Pembahasan Bertahap (5 Contoh Variatif)</h2>
+                        <p style="font-size: 0.88rem; color: #475569;">
+                            Pelajari format penulisan <strong>Diketahui &rarr; Ditanya &rarr; Rumus &rarr; Langkah Perhitungan</strong> di bawah ini.
+                        </p>
+                    </div>
+                    <button class="btn-step" id="btn-toggle-all-steps" onclick="toggleAllExamples()">
+                        Buka Semua Pembahasan
+                    </button>
+                </div>
+
+                <div id="examples-container">
+                    <!-- Diisi otomatis via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             TAB 4: LATIHAN SOAL INTERAKTIF (10 BUTIR)
+             ===================================================================== -->
+        <section id="panel-4" class="tab-panel">
+            <div class="card">
+                <span class="section-pill pill-heat">Evaluasi Pemahaman Siswa</span>
+                <h2>Latihan Soal Pemuaian Kelas 7 SMP (10 Butir)</h2>
+                <p style="font-size: 0.88rem; color: #475569; margin-bottom: 1rem;">
+                    Isi nama lengkapmu, pilih jawaban A, B, C, atau D pada seluruh 10 soal, lalu klik tombol <strong>"Periksa Jawaban &amp; Lihat Nilai"</strong>.
+                </p>
+
+                <!-- Bar Identitas Siswa & Progress -->
+                <div class="quiz-student-bar">
+                    <div class="input-field">
+                        <label for="siswa-nama">Nama Lengkap Siswa:</label>
+                        <input type="text" id="siswa-nama" placeholder="Ketik namamu di sini...">
+                    </div>
+                    <div class="input-field">
+                        <label for="siswa-kelas">Kelas / Nomor Absen:</label>
+                        <input type="text" id="siswa-kelas" placeholder="Contoh: VII-B / 12">
+                    </div>
+                    <div class="progress-pill">
+                        Terjawab: <span id="quiz-progress-text">0 / 10</span>
+                    </div>
+                </div>
+
+                <!-- Panel Hasil Skor (Muncul setelah submit) -->
+                <div id="quiz-score-panel" class="score-panel">
+                    <div>
+                        <span class="badge-kelas">Hasil Evaluasi Belajar IPA</span>
+                        <h2 style="color: #ffffff; margin-top: 0.35rem;" id="score-title">Hebat Sekali!</h2>
+                        <p style="font-size: 0.9rem; color: #e0f2fe;" id="score-student-meta">Siswa: -</p>
+                        <p style="font-size: 0.86rem; color: #fef08a; margin-top: 0.35rem;" id="score-detail-stats">
+                            Jawaban Benar: 0 | Jawaban Salah: 0
+                        </p>
+                    </div>
+                    <div class="score-circle">
+                        <span style="font-size: 0.72rem; font-weight: 800; color: #64748b; text-transform: uppercase;">Skor Akhir</span>
+                        <span class="num" id="score-value">100</span>
+                        <span style="font-size: 0.75rem; font-weight: 700; color: #475569;">Skala 100</span>
+                    </div>
+                </div>
+
+                <!-- Daftar 10 Soal -->
+                <div id="quiz-container">
+                    <!-- Diisi otomatis via JavaScript -->
+                </div>
+
+                <div id="quiz-warning" class="alert-msg"></div>
+
+                <!-- Tombol Aksi Kuis -->
+                <div class="quiz-actions">
+                    <button class="btn-secondary-lg" onclick="resetQuiz()">🔄 Ulangi Kuis</button>
+                    <button class="btn-primary-lg" id="btn-submit-quiz" onclick="submitQuiz()">🎯 Periksa Jawaban &amp; Lihat Nilai</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================================================================
+         FOOTER
+         ========================================================================= -->
+    <footer>
+        <div class="container">
+            <p><strong>Bahan Ajar IPA Interaktif: Pemuaian Zat (Kelas 7 SMP)</strong> • Disusun oleh <strong>Ibu Iin Indriyati</strong></p>
+        </div>
+    </footer>
+
+    <!-- =========================================================================
+         JAVASCRIPT LOGIKA SIMULASI, PENERAPAN, CONTOH SOAL & EVALUASI
+         ========================================================================= -->
+    <script>
+        // =========================================================================
+        // 1. NAVIGASI TAB UTAMA
+        // =========================================================================
+        function switchTab(tabIndex) {
+            for (let i = 1; i <= 4; i++) {
+                document.getElementById(`panel-${i}`).classList.remove('active');
+                document.getElementById(`tab-btn-${i}`).classList.remove('active');
+            }
+            document.getElementById(`panel-${tabIndex}`).classList.add('active');
+            document.getElementById(`tab-btn-${tabIndex}`).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // =========================================================================
+        // 2. SIMULATOR PEMUAIAN BATANG LOGAM
+        // =========================================================================
+        function updateRodSim() {
+            const selectEl = document.getElementById('metal-select');
+            const alpha = parseFloat(selectEl.value);
+            const l0 = parseFloat(document.getElementById('l0-slider').value);
+            const dt = parseFloat(document.getElementById('dt-slider').value);
+
+            // Format angka Indonesia (koma desimal)
+            const fmt = (num, dec) => num.toFixed(dec).replace('.', ',');
+
+            document.getElementById('l0-display').textContent = `${fmt(l0, 1)} m`;
+            document.getElementById('dt-display').innerHTML = `${dt} &deg;C`;
+
+            // Hitung ΔL (meter & mm) dan Lt
+            const deltaL_m = l0 * alpha * dt;
+            const deltaL_mm = deltaL_m * 1000;
+            const lt = l0 + deltaL_m;
+
+            document.getElementById('res-alpha').innerHTML = `${alpha.toFixed(6).replace('.', ',')} /&deg;C`;
+            document.getElementById('res-dl-mm').textContent = `${fmt(deltaL_mm, 2)} mm`;
+            document.getElementById('res-dl-m').textContent = `${fmt(deltaL_m, 5)} m`;
+            document.getElementById('res-lt').textContent = `${fmt(lt, 5)} m`;
+
+            // Update lebar visual batang dasar (proporsional terhadap max 10m -> max 78% lebar track)
+            const baseWidthPct = (l0 / 10) * 76;
+            // Skala visualisasi ΔL diperbesar agar siswa mudah mengamati perbedaannya
+            const visualDeltaPct = Math.min(22, (deltaL_mm / 48) * 22);
+
+            const baseBar = document.getElementById('rod-base-bar');
+            const deltaBar = document.getElementById('rod-delta-bar');
+
+            baseBar.style.width = `${baseWidthPct}%`;
+            baseBar.innerHTML = `L<sub>0</sub> = ${fmt(l0, 1)} m`;
+            deltaBar.style.width = `${visualDeltaPct}%`;
+
+            // Perubahan warna batang logam saat suhu meningkat (abu-abu dingin -> merah membara)
+            const heatRatio = dt / 200;
+            if (dt === 0) {
+                baseBar.style.background = 'linear-gradient(180deg, #94a3b8 0%, #475569 100%)';
+                document.getElementById('heat-status-text').innerHTML = '❄️ Suhu Awal (&Delta;T = 0&deg;C) — Belum ada pemuaian';
+            } else if (heatRatio < 0.4) {
+                baseBar.style.background = 'linear-gradient(180deg, #a8a29e 0%, #9a3412 100%)';
+                document.getElementById('heat-status-text').innerHTML = `🔥 Pemanasan Ringan (&Delta;T = ${dt}&deg;C)`;
+            } else if (heatRatio < 0.75) {
+                baseBar.style.background = 'linear-gradient(180deg, #ea580c 0%, #991b1b 100%)';
+                document.getElementById('heat-status-text').innerHTML = `🔥🔥 Pemanasan Tinggi (&Delta;T = ${dt}&deg;C)`;
+            } else {
+                baseBar.style.background = 'linear-gradient(180deg, #f97316 0%, #dc2626 100%)';
+                document.getElementById('heat-status-text').innerHTML = `🔥🔥🔥 Pemanasan Maksimal (&Delta;T = ${dt}&deg;C)`;
+            }
+        }
+
+        // =========================================================================
+        // 3. SIMULATOR KEPING BIMETAL INTERAKTIF
+        // =========================================================================
+        function setBimetalState(state) {
+            const brassPath = document.getElementById('bimetal-brass');
+            const ironPath = document.getElementById('bimetal-iron');
+            const badge = document.getElementById('svg-temp-badge');
+            const expBox = document.getElementById('bimetal-explanation');
+
+            if (state === 'heat') {
+                // Melengkung ke bawah (ke arah Besi) karena Kuningan memuai lebih panjang
+                brassPath.setAttribute('d', 'M 40 77 Q 175 78 280 128');
+                ironPath.setAttribute('d', 'M 40 89 Q 168 90 272 135');
+                badge.textContent = '🔥 Dipanaskan (150°C) — Melengkung ke arah Besi';
+                badge.setAttribute('fill', '#fb923c');
+
+                expBox.innerHTML = `
+                    <h3 style="color: #ea580c;">Kondisi Dipanaskan: Melengkung ke Arah Besi!</h3>
+                    <p style="margin-bottom: 0.6rem;">
+                        Karena koefisien muai panjang <strong>Kuningan</strong> lebih besar daripada <strong>Besi</strong>, kuningan bertambah panjang lebih cepat. Akibatnya, kuningan berada di sisi luar lengkungan dan keping bimetal <strong>melengkung ke arah Besi</strong> (koefisien muai kecil).
+                    </p>
+                    <div class="info-banner info-amber" style="font-size: 0.83rem;">
+                        <strong>🔌 Aplikasi pada Setrika Listrik Otomatis:</strong><br>
+                        Saat setrika terlalu panas, keping bimetal melengkung menjauhi kontak saklar sehingga arus listrik terputus otomatis (lampu indikator padam) dan mencegah pakaian terbakar.
+                    </div>
+                `;
+            } else if (state === 'cool') {
+                // Melengkung ke atas (ke arah Kuningan) karena Kuningan menyusut lebih cepat
+                brassPath.setAttribute('d', 'M 40 77 Q 168 75 272 30');
+                ironPath.setAttribute('d', 'M 40 89 Q 175 87 280 37');
+                badge.textContent = '❄️ Didinginkan (0°C) — Melengkung ke arah Kuningan';
+                badge.setAttribute('fill', '#38bdf8');
+
+                expBox.innerHTML = `
+                    <h3 style="color: #0284c7;">Kondisi Didinginkan: Melengkung ke Arah Kuningan!</h3>
+                    <p style="margin-bottom: 0.6rem;">
+                        Logam yang cepat memuai saat dipanaskan juga <strong>cepat menyusut saat didinginkan</strong>. Ketika suhu turun, <strong>Kuningan</strong> menyusut lebih pendek daripada <strong>Besi</strong> sehingga keping bimetal <strong>melengkung ke arah Kuningan</strong> (koefisien muai besar).
+                    </p>
+                    <div class="info-banner info-cyan" style="font-size: 0.83rem;">
+                        <strong>❄️ Aplikasi pada Termostat Lemari Es (Kulkas):</strong><br>
+                        Saat suhu dalam kulkas sudah cukup dingin, keping bimetal melengkung dan memutus arus ke mesin kompresor pendingin untuk menghemat energi listrik.
+                    </div>
+                `;
+            } else {
+                // Suhu Normal (lurus)
+                brassPath.setAttribute('d', 'M 40 77 Q 160 77 285 77');
+                ironPath.setAttribute('d', 'M 40 89 Q 160 89 285 89');
+                badge.textContent = 'Suhu Normal (25°C) — Posisi Lurus';
+                badge.setAttribute('fill', '#38bdf8');
+
+                expBox.innerHTML = `
+                    <h3 style="color: var(--primary-dark);">Kondisi Awal: Suhu Normal (25&deg;C)</h3>
+                    <p style="margin-bottom: 0.6rem;">
+                        Pada suhu kamar, panjang keping <strong>Kuningan</strong> dan <strong>Besi</strong> sama sehingga keping bimetal berada dalam posisi lurus mendatar.
+                    </p>
+                    <div class="info-banner info-amber" style="font-size: 0.83rem;">
+                        <strong>💡 Rumus Hafalan Cepat Bimetal:</strong><br>
+                        • Saat <strong>DIPANASKAN</strong> &rarr; Melengkung ke arah logam berkoefisien muai <strong>KECIL</strong> (Besi).<br>
+                        • Saat <strong>DIDINGINKAN</strong> &rarr; Melengkung ke arah logam berkoefisien muai <strong>BESAR</strong> (Kuningan).
+                    </div>
+                `;
+            }
+        }
+
+        // =========================================================================
+        // 4. DATA PENERAPAN & MASALAH PEMUAIAN SEHARI-HARI (6 KARTU INTERAKTIF)
+        // =========================================================================
+        const applicationsData = [
+            {
+                emoji: "🚆",
+                title: "Pemasangan Celah pada Sambungan Rel Kereta Api",
+                tag: "Antisipasi Pemuaian Panjang",
+                detail: "Sambungan antar batang rel kereta api sengaja diberi celah sempit. Saat terik matahari di siang hari atau akibat gesekan roda kereta, suhu rel naik sehingga rel memuai memanjang. Celah tersebut memberi ruang muai agar rel tidak saling bertumbukan dan melengkung yang dapat membahayakan perjalanan kereta api."
+            },
+            {
+                emoji: "🪟",
+                title: "Pemberian Ruang Muai pada Bingkai Kaca Jendela",
+                tag: "Antisipasi Pemuaian Luas",
+                detail: "Ukuran bingkai kayu atau aluminium jendela dibuat sedikit lebih longgar daripada ukuran lembaran kacanya. Tujuannya agar ketika suhu udara siang hari meningkat dan kaca memuai, kaca memiliki ruang cukup sehingga tidak terjepit dan pecah/retak."
+            },
+            {
+                emoji: "⚡",
+                title: "Pemasangan Kabel Listrik & Telepon yang Kendur",
+                tag: "Antisipasi Penyusutan",
+                detail: "Kabel jaringan listrik dan telepon di tiang jalan dipasang agak kendur (melengkung ke bawah). Hal ini dilakukan agar saat malam hari atau cuaca dingin tiba, kabel yang mengalami penyusutan (memendek) tidak menegang berlebihan dan putus."
+            },
+            {
+                emoji: "👔",
+                title: "Keping Bimetal pada Setrika Otomatis & Alarm Kebakaran",
+                tag: "Pemanfaatan Bimetal",
+                detail: "Pada setrika listrik otomatis, keping bimetal berfungsi sebagai saklar termal yang memutus arus listrik saat suhu mencapai batas maksimal dan menyambungkannya kembali saat suhu turun. Pada alarm kebakaran, panas api membuat bimetal melengkung menyentuh kontak listrik sehingga bel alarm berbunyi."
+            },
+            {
+                emoji: "🛞",
+                title: "Pemasangan Ban Besi pada Roda Pedati & Pengelingan Pelat",
+                tag: "Pemanfaatan Pemuaian & Penyusutan",
+                detail: "Diameter ban besi dibuat sedikit lebih kecil daripada roda kayu. Ban besi dipanaskan terlebih dahulu agar memuai dan mudah dipasang pada roda kayu; setelah dingin ban menyusut dan menjepit roda dengan sangat kuat. Prinsip serupa digunakan saat menyambung pelat kapal dengan paku keling panas."
+            },
+            {
+                emoji: "🌡️",
+                title: "Termometer Zat Cair (Raksa atau Alkohol)",
+                tag: "Pemanfaatan Pemuaian Volume",
+                detail: "Termometer klinis maupun laboratorium memanfaatkan sifat pemuaian volume zat cair di dalam pipa kapiler kaca. Ketika suhu tubuh atau benda naik, cairan raksa atau alkohol berwarna memuai dan naik ke atas menunjukkan angka skala suhu yang tepat."
+            }
+        ];
+
+        function renderApplications() {
+            const grid = document.getElementById('applications-grid');
+            grid.innerHTML = applicationsData.map((item, idx) => `
+                <div class="app-card" id="app-card-${idx}" onclick="toggleAppCard(${idx})">
+                    <div class="app-header">
+                        <div class="app-title-wrap">
+                            <div class="app-emoji">${item.emoji}</div>
+                            <div>
+                                <span style="font-size: 0.7rem; font-weight: 800; color: #ea580c; text-transform: uppercase;">${item.tag}</span>
+                                <h3 style="font-size: 0.96rem; margin: 0;">${item.title}</h3>
+                            </div>
+                        </div>
+                        <span class="app-toggle-tag" id="app-tag-${idx}">+ Detail</span>
+                    </div>
+                    <div class="app-detail">
+                        <p>${item.detail}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function toggleAppCard(idx) {
+            const card = document.getElementById(`app-card-${idx}`);
+            const tag = document.getElementById(`app-tag-${idx}`);
+            card.classList.toggle('open');
+            tag.textContent = card.classList.contains('open') ? '− Tutup' : '+ Detail';
+        }
+
+        // =========================================================================
+        // 5. DATA CONTOH SOAL & PEMBAHASAN BERTAHAP (5 SOAL)
+        // =========================================================================
+        const examplesData = [
+            {
+                num: 1,
+                topic: "Pemuaian Panjang Batang Logam",
+                question: "Sebatang rel baja memiliki panjang awal 10 m pada suhu 20°C. Jika pada siang hari suhu rel meningkat menjadi 70°C dan koefisien muai panjang baja adalah 0,000012 /°C, hitunglah pertambahan panjang dan panjang akhir rel baja tersebut!",
+                diketahui: "L₀ = 10 m;  T₁ = 20°C;  T₂ = 70°C;  ΔT = 70°C − 20°C = 50°C;  α = 0,000012 /°C",
+                ditanya: "Pertambahan panjang (ΔL) dan panjang akhir (Lₜ)",
+                rumus: "ΔL = L₀ · α · ΔT   dan   Lₜ = L₀ + ΔL",
+                langkah: "1. Hitung pertambahan panjang (ΔL):\n   ΔL = 10 m × 0,000012 /°C × 50°C = 0,006 m (atau 6 mm).\n2. Hitung panjang akhir (Lₜ):\n   Lₜ = 10 m + 0,006 m = 10,006 m.\nJadi, rel baja bertambah panjang 6 mm sehingga panjang akhirnya menjadi 10,006 m."
+            },
+            {
+                num: 2,
+                topic: "Pemuaian Luas Pelat Logam",
+                question: "Sebuah pelat aluminium berbentuk persegi panjang memiliki luas awal 2 m² pada suhu 25°C. Pelat tersebut dipanaskan hingga bersuhu 125°C. Jika koefisien muai panjang aluminium α = 0,000024 /°C, berapakah pertambahan luas pelat tersebut?",
+                diketahui: "A₀ = 2 m²;  ΔT = 125°C − 25°C = 100°C;  α = 0,000024 /°C → β = 2α = 2 × 0,000024 = 0,000048 /°C",
+                ditanya: "Pertambahan luas pelat (ΔA)",
+                rumus: "ΔA = A₀ · β · ΔT   (dengan β = 2α)",
+                langkah: "1. Tentukan koefisien muai luas (β):\n   β = 2 × 0,000024 /°C = 0,000048 /°C.\n2. Hitung pertambahan luas (ΔA):\n   ΔA = 2 m² × 0,000048 /°C × 100°C = 0,0096 m² (atau 96 cm²).\nJadi, pertambahan luas pelat aluminium adalah 0,0096 m²."
+            },
+            {
+                num: 3,
+                topic: "Pemuaian Volume Bejana / Benda Ruang",
+                question: "Sebuah kubus tembaga memiliki volume awal 500 cm³ pada suhu 30°C. Kubus tersebut dipanaskan hingga suhunya mencapai 80°C. Apabila koefisien muai panjang tembaga adalah 0,000017 /°C, tentukan volume akhir kubus tembaga tersebut!",
+                diketahui: "V₀ = 500 cm³;  ΔT = 80°C − 30°C = 50°C;  α = 0,000017 /°C → γ = 3α = 0,000051 /°C",
+                ditanya: "Volume akhir kubus tembaga (Vₜ)",
+                rumus: "ΔV = V₀ · γ · ΔT   dan   Vₜ = V₀ + ΔV   (dengan γ = 3α)",
+                langkah: "1. Tentukan koefisien muai volume (γ):\n   γ = 3 × 0,000017 /°C = 0,000051 /°C.\n2. Hitung pertambahan volume (ΔV):\n   ΔV = 500 cm³ × 0,000051 /°C × 50°C = 1,275 cm³.\n3. Hitung volume akhir (Vₜ):\n   Vₜ = 500 cm³ + 1,275 cm³ = 501,275 cm³."
+            },
+            {
+                num: 4,
+                topic: "Analisis Arah Lengkung Keping Bimetal",
+                question: "Perhatikan tabel koefisien muai panjang berikut:\n• Aluminium (α = 0,000024 /°C)\n• Tembaga (α = 0,000017 /°C)\n• Baja (α = 0,000011 /°C)\nJika keping bimetal terbuat dari Tembaga dan Aluminium dipanaskan, ke arah logam manakah keping bimetal tersebut akan melengkung? Jelaskan alasannya!",
+                diketahui: "Logam 1 = Aluminium (α = 0,000024 /°C);  Logam 2 = Tembaga (α = 0,000017 /°C);  Perlakuan = Dipanaskan",
+                ditanya: "Arah lengkung keping bimetal saat dipanaskan beserta alasannya",
+                rumus: "Prinsip Bimetal: Dipanaskan → melengkung ke arah α kecil;  Didinginkan → melengkung ke arah α besar",
+                langkah: "1. Bandingkan koefisien muai panjang kedua logam: α Aluminium (0,000024 /°C) > α Tembaga (0,000017 /°C).\n2. Saat dipanaskan, Aluminium memuai lebih panjang daripada Tembaga sehingga Aluminium berada di bagian luar lengkungan.\n3. Kesimpulan: Keping bimetal melengkung ke arah <strong>Tembaga</strong> (logam dengan koefisien muai panjang lebih kecil)."
+            },
+            {
+                num: 5,
+                topic: "Pemecahan Masalah Sehari-hari",
+                question: "Ibu mengalami kesulitan membuka tutup botol selai yang terbuat dari logam karena terlalu rapat menempel pada mulut botol kaca. Bagaimanakah cara mudah yang dapat dilakukan menggunakan konsep pemuaian untuk membuka tutup botol tersebut?",
+                diketahui: "Tutup botol terbuat dari logam (α besar);  Botol terbuat dari kaca (α kecil)",
+                ditanya: "Cara membuka tutup botol logam yang macet berdasarkan konsep pemuaian",
+                rumus: "ΔL = L₀ · α · ΔT (Logam memiliki α lebih besar dari kaca)",
+                langkah: "1. Siram atau celupkan bagian tutup botol logam ke dalam air panas selama beberapa detik.\n2. Karena koefisien muai logam jauh lebih besar daripada kaca (α logam > α kaca), tutup botol logam akan memuai lebih cepat dan menjadi sedikit lebih longgar daripada mulut botol kaca.\n3. Tutup botol pun dapat diputar dan dibuka dengan mudah."
+            }
+        ];
+
+        function renderExamples() {
+            const container = document.getElementById('examples-container');
+            container.innerHTML = examplesData.map((ex, idx) => `
+                <div class="example-card">
+                    <div class="ex-meta">
+                        <span class="ex-num">Contoh Soal #${ex.num}</span>
+                        <span class="ex-topic">${ex.topic}</span>
+                    </div>
+                    <p class="ex-question">${ex.question}</p>
+                    <button class="btn-step" id="btn-step-${idx}" onclick="toggleExampleStep(${idx})">
+                        👁️ Lihat Pembahasan Step-by-Step
+                    </button>
+                    <div class="step-solution" id="sol-box-${idx}">
+                        <div class="step-row"><span class="step-label">Diketahui:</span> ${ex.diketahui}</div>
+                        <div class="step-row"><span class="step-label">Ditanya:</span> ${ex.ditanya}</div>
+                        <div class="step-row"><span class="step-label">Rumus:</span> <strong>${ex.rumus}</strong></div>
+                        <div class="step-row" style="white-space: pre-line;"><span class="step-label">Perhitungan:</span>\n${ex.langkah}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function toggleExampleStep(idx) {
+            const box = document.getElementById(`sol-box-${idx}`);
+            const btn = document.getElementById(`btn-step-${idx}`);
+            box.classList.toggle('open');
+            btn.textContent = box.classList.contains('open') ? '🙈 Sembunyikan Pembahasan' : '👁️ Lihat Pembahasan Step-by-Step';
+        }
+
+        let allStepsOpen = false;
+        function toggleAllExamples() {
+            allStepsOpen = !allStepsOpen;
+            document.getElementById('btn-toggle-all-steps').textContent = allStepsOpen ? 'Tutup Semua Pembahasan' : 'Buka Semua Pembahasan';
+            examplesData.forEach((_, idx) => {
+                const box = document.getElementById(`sol-box-${idx}`);
+                const btn = document.getElementById(`btn-step-${idx}`);
+                if (allStepsOpen) {
+                    box.classList.add('open');
+                    btn.textContent = '🙈 Sembunyikan Pembahasan';
+                } else {
+                    box.classList.remove('open');
+                    btn.textContent = '👁️ Lihat Pembahasan Step-by-Step';
+                }
+            });
+        }
+
+        // =========================================================================
+        // 6. LATIHAN SOAL INTERAKTIF (10 BUTIR) & PENILAIAN OTOMATIS
+        // =========================================================================
+        const quizData = [
+            {
+                id: 1,
+                question: "Peristiwa bertambahnya ukuran suatu benda (panjang, luas, atau volume) karena mengalami kenaikan suhu disebut...",
+                options: [
+                    "Penyusutan",
+                    "Pemuaian",
+                    "Penguapan",
+                    "Pembekuan"
+                ],
+                correct: 1,
+                explanation: "Pemuaian adalah bertambahnya ukuran suatu benda akibat menerima kalor (kenaikan suhu), sedangkan penyusutan terjadi ketika suhu turun."
+            },
+            {
+                id: 2,
+                question: "Faktor-faktor berikut ini memengaruhi besarnya pertambahan panjang suatu batang logam saat dipanaskan, KECUALI...",
+                options: [
+                    "Panjang awal batang logam",
+                    "Jenis bahan (koefisien muai panjang)",
+                    "Besar kenaikan suhu yang dialami",
+                    "Warna cat permukaan batang logam"
+                ],
+                correct: 3,
+                explanation: "Berdasarkan rumus ΔL = L₀ · α · ΔT, pertambahan panjang dipengaruhi oleh panjang awal (L₀), jenis bahan (α), dan kenaikan suhu (ΔT), bukan warna permukaan benda."
+            },
+            {
+                id: 3,
+                question: "Sebatang kawat tembaga panjangnya 2 meter pada suhu 20°C. Jika kawat tersebut dipanaskan hingga suhu 120°C dan koefisien muai panjang tembaga adalah 0,000017 /°C, pertambahan panjang kawat tersebut adalah...",
+                options: [
+                    "0,0017 m",
+                    "0,0034 m",
+                    "0,0170 m",
+                    "0,0340 m"
+                ],
+                correct: 1,
+                explanation: "Diketahui L₀ = 2 m, ΔT = 120°C − 20°C = 100°C, α = 0,000017 /°C. Maka ΔL = L₀ · α · ΔT = 2 × 0,000017 × 100 = 0,0034 m (3,4 mm)."
+            },
+            {
+                id: 4,
+                question: "Hubungan yang tepat antara koefisien muai panjang (α), koefisien muai luas (β), dan koefisien muai volume (γ) pada zat padat adalah...",
+                options: [
+                    "β = 2α dan γ = 3α",
+                    "β = 3α dan γ = 2α",
+                    "α = 2β dan γ = 3β",
+                    "β = α dan γ = 2α"
+                ],
+                correct: 0,
+                explanation: "Untuk zat padat yang sama, koefisien muai luas (2 dimensi) bernilai β = 2α, sedangkan koefisien muai volume (3 dimensi) bernilai γ = 3α."
+            },
+            {
+                id: 5,
+                question: "Sebuah pelat baja memiliki luas awal 4 m² pada suhu 30°C. Jika koefisien muai panjang baja 0,000012 /°C dan pelat dipanaskan hingga suhu 80°C, berapakah pertambahan luas pelat baja tersebut?",
+                options: [
+                    "0,0024 m²",
+                    "0,0048 m²",
+                    "0,0240 m²",
+                    "0,0480 m²"
+                ],
+                correct: 1,
+                explanation: "β = 2α = 2 × 0,000012 = 0,000024 /°C; ΔT = 80°C − 30°C = 50°C. Maka ΔA = A₀ · β · ΔT = 4 × 0,000024 × 50 = 0,0048 m²."
+            },
+            {
+                id: 6,
+                question: "Zat cair dan zat gas hanya mengalami satu jenis pemuaian saja ketika dipanaskan, yaitu...",
+                options: [
+                    "Pemuaian panjang",
+                    "Pemuaian luas",
+                    "Pemuaian volume",
+                    "Pemuaian massa"
+                ],
+                correct: 2,
+                explanation: "Zat cair dan gas tidak memiliki bentuk tetap (selalu mengikuti bentuk wadahnya), sehingga keduanya hanya mengalami pemuaian volume."
+            },
+            {
+                id: 7,
+                question: "Peristiwa unik pada air yang disebut anomali air terjadi pada rentang suhu...",
+                options: [
+                    "0°C hingga 4°C",
+                    "4°C hingga 25°C",
+                    "25°C hingga 50°C",
+                    "96°C hingga 100°C"
+                ],
+                correct: 0,
+                explanation: "Pada suhu 0°C hingga 4°C, ketika air dipanaskan volumenya justru menyusut (mengecil) dan massa jenisnya mencapai maksimum pada suhu 4°C."
+            },
+            {
+                id: 8,
+                question: "Keping bimetal dibuat dari dua keping logam yang dikeling menjadi satu, yaitu logam P (α = 0,000019 /°C) dan logam Q (α = 0,000011 /°C). Jika keping bimetal tersebut dipanaskan, arah lengkungannya adalah...",
+                options: [
+                    "Melengkung ke arah logam P karena α logam P lebih besar",
+                    "Melengkung ke arah logam Q karena α logam Q lebih kecil",
+                    "Tetap lurus karena kedua logam dipanaskan bersamaan",
+                    "Memendek ke arah tengah sambungan"
+                ],
+                correct: 1,
+                explanation: "Saat dipanaskan, logam P memuai lebih panjang daripada logam Q sehingga keping bimetal melengkung ke arah logam Q (koefisien muai panjang lebih kecil)."
+            },
+            {
+                id: 9,
+                question: "Pemasangan kabel listrik di tiang pinggir jalan sengaja dibuat agak kendur dengan tujuan agar...",
+                options: [
+                    "Kabel tidak mudah putus ketika menyusut pada malam hari yang dingin",
+                    "Kabel terlihat lebih panjang dan rapi dari kejauhan",
+                    "Arus listrik dapat mengalir lebih cepat di dalam kabel",
+                    "Kabel tidak memuai saat terkena terik sinar matahari"
+                ],
+                correct: 0,
+                explanation: "Pada malam hari atau cuaca dingin, suhu udara turun sehingga kabel menyusut (memendek). Pemasangan yang agak kendur mencegah kabel menegang kuat hingga putus."
+            },
+            {
+                id: 10,
+                question: "Alat rumah tangga berikut ini yang memanfaatkan prinsip kerja keping bimetal sebagai saklar otomatis pengatur suhu adalah...",
+                options: [
+                    "Kipas angin dan blender",
+                    "Setrika listrik otomatis dan oven",
+                    "Televisi dan radio",
+                    "Lampu senter dan baterai"
+                ],
+                correct: 1,
+                explanation: "Setrika listrik otomatis, oven, dan pemanas air (water heater) menggunakan termostat berbahan keping bimetal untuk memutus dan menyambung arus listrik sesuai batas suhu."
+            }
+        ];
+
+        let userQuizAnswers = new Array(quizData.length).fill(null);
+        let isQuizEvaluated = false;
+
+        function renderQuiz() {
+            const container = document.getElementById('quiz-container');
+            const letters = ['A', 'B', 'C', 'D'];
+
+            container.innerHTML = quizData.map((q, qIdx) => {
+                const chosen = userQuizAnswers[qIdx];
+
+                return `
+                    <div class="quiz-card" id="quiz-card-${qIdx}">
+                        <div class="q-header">
+                            <span class="q-number">${q.id}</span>
+                            <span style="font-size: 0.75rem; font-weight: 700; color: #64748b;">Soal Nomor ${q.id}</span>
+                        </div>
+                        <p class="q-text">${q.question}</p>
+                        <div class="options-list">
+                            ${q.options.map((optText, oIdx) => {
+                                let cls = "opt-btn";
+                                let badge = "";
+
+                                if (!isQuizEvaluated) {
+                                    if (chosen === oIdx) cls += " selected";
+                                } else {
+                                    if (oIdx === q.correct) {
+                                        cls += " correct";
+                                        badge = "✅ Benar";
+                                    } else if (chosen === oIdx && chosen !== q.correct) {
+                                        cls += " wrong";
+                                        badge = "❌ Pilihanmu";
+                                    }
+                                }
+
+                                return `
+                                    <button class="${cls}" onclick="selectQuizOption(${qIdx}, ${oIdx})" ${isQuizEvaluated ? 'disabled' : ''}>
+                                        <span class="opt-left">
+                                            <span class="opt-letter">${letters[oIdx]}</span>
+                                            <span>${optText}</span>
+                                        </span>
+                                        ${badge ? `<span style="font-size: 0.78rem; font-weight: 800; white-space: nowrap;">${badge}</span>` : ''}
+                                    </button>
+                                `;
+                            }).join('')}
+                        </div>
+
+                        ${isQuizEvaluated ? `
+                            <div class="q-explanation ${chosen === q.correct ? 'ok' : ''}">
+                                <strong>${chosen === q.correct ? '🎉 Jawaban Tepat!' : `💡 Kunci Jawaban: ${letters[q.correct]} • Pembahasan:`}</strong><br>
+                                ${q.explanation}
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            }).join('');
+
+            const answeredTotal = userQuizAnswers.filter(a => a !== null).length;
+            document.getElementById('quiz-progress-text').textContent = `${answeredTotal} / 10`;
+        }
+
+        function selectQuizOption(qIdx, oIdx) {
+            if (isQuizEvaluated) return;
+            userQuizAnswers[qIdx] = oIdx;
+            document.getElementById('quiz-warning').style.display = 'none';
+            renderQuiz();
+        }
+
+        function submitQuiz() {
+            const unansweredIdx = userQuizAnswers.findIndex(a => a === null);
+            if (unansweredIdx !== -1) {
+                const warn = document.getElementById('quiz-warning');
+                warn.style.display = 'block';
+                warn.textContent = `⚠️ Soal nomor ${unansweredIdx + 1} belum dijawab. Silakan lengkapi seluruh 10 soal terlebih dahulu!`;
+                const cardEl = document.getElementById(`quiz-card-${unansweredIdx}`);
+                cardEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                cardEl.style.borderColor = '#f59e0b';
+                setTimeout(() => { cardEl.style.borderColor = '#e2e8f0'; }, 2000);
+                return;
+            }
+
+            isQuizEvaluated = true;
+            let correctCount = 0;
+            quizData.forEach((q, idx) => {
+                if (userQuizAnswers[idx] === q.correct) correctCount++;
+            });
+
+            const wrongCount = quizData.length - correctCount;
+            const score = correctCount * 10;
+
+            const nama = document.getElementById('siswa-nama').value.trim() || 'Siswa Kelas 7';
+            const kelas = document.getElementById('siswa-kelas').value.trim() || '-';
+
+            document.getElementById('score-value').textContent = score;
+            document.getElementById('score-student-meta').textContent = `Nama: ${nama}  |  Kelas/Absen: ${kelas}`;
+            document.getElementById('score-detail-stats').textContent = `✅ Jawaban Benar: ${correctCount} soal   •   ❌ Jawaban Salah: ${wrongCount} soal`;
+
+            let titleMsg = 'Terus Semangat Belajar!';
+            if (score >= 90) titleMsg = '🏆 Luar Biasa (Sangat Memuaskan)!';
+            else if (score >= 75) titleMsg = '🌟 Bagus Sekali (Tuntas)!';
+            else if (score >= 60) titleMsg = '📘 Cukup Baik!';
+
+            document.getElementById('score-title').textContent = titleMsg;
+            document.getElementById('quiz-score-panel').classList.add('show');
+            document.getElementById('btn-submit-quiz').disabled = true;
+
+            renderQuiz();
+            document.getElementById('quiz-score-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function resetQuiz() {
+            userQuizAnswers = new Array(quizData.length).fill(null);
+            isQuizEvaluated = false;
+            document.getElementById('quiz-score-panel').classList.remove('show');
+            document.getElementById('quiz-warning').style.display = 'none';
+            document.getElementById('btn-submit-quiz').disabled = false;
+            renderQuiz();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // =========================================================================
+        // 7. INISIALISASI HALAMAN SAAT DIMUAT
+        // =========================================================================
+        window.addEventListener('DOMContentLoaded', () => {
+            updateRodSim();
+            renderApplications();
+            renderExamples();
+            renderQuiz();
+        });
+    </script>
+</body>
+</html>
